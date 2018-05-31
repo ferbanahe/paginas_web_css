@@ -3,7 +3,7 @@
 @font-face {font-family:'Perma';
             src: url('../assets/PermanentMarker-Regular.ttf')
         }
-    /* ejemplo el de arriba de en que nos bajamos nuestras fuentes fuera de las de google */    
+    /* ejemplo el de arriba en que nos bajamos nuestras fuentes fuera de las de google */    
 *,
 *::after, *::before 
 *:after, *:before {
@@ -14,6 +14,22 @@
 body {
     background-color: bisque;
 }
+
+.icono_inicio {
+    position: absolute;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: brown;
+    border-radius: 50%;
+    color: blue;
+    cursor: pointer;
+    font-style: italic;
+}
+.icono_inicio:hover {
+    background-color: olive;
+    color:tomato;
+    font-size: 4rem;
+} 
 
 h1 {
     font-family: 'Perma', cursive;
