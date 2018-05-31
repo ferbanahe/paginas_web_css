@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+/* ejmplo el de arriba de import haciendo los mismo que el link de google*/
+@font-face {font-family:'Perma';
+            src: url('../assets/PermanentMarker-Regular.ttf')
+        }
+    /* ejemplo el de arriba de en que nos bajamos nuestras fuentes fuera de las de google */    
+*,
+*::after, *::before 
+*:after, *:before {
+    box-sizing: border-box;
+}
+/* hay que usar lo de arriba siempre en la hoja de estilo, es un patrón */
+
+body {
+    background-color: bisque;
+}
+
+h1 {
+    font-family: 'Perma', cursive;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: Pacifico, cursive;
+}
+
+p {
+    font-family: Roboto, Verdana, Arial, sans-serif; 
+}
+
+
+
