@@ -1,0 +1,21 @@
+body {
+    margin-top: 0rem;
+}
+header {margin-top: 0rem;
+        margin-bottom: 2rem;
+        height: 4rem;
+        background-color: maroon;
+        color: bisque;
+}
+h1 {margin-top: 0rem;
+    text-align: center;
+    line-height: 4rem;
+    
+}
+p {text-align: justify;
+    text-indent: 3rem;
+/* abajo centramos poniendo los margenes derecha e izquierda automáticamente y con el 50 por ciento hacemos que se centre verdadeamente al no ser el 100% */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
