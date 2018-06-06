@@ -22,5 +22,5 @@ section>div>div {
 aside>div {
     width: 8rem;
     height: 8rem;
-    background: linear-gradient(chartreuse, blueviolet);
+    background: linear-gradient(to left, chartreuse, blueviolet);
 }

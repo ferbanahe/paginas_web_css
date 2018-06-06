@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    width: 20%;
+   
+}
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+section.dragones {
+    /* border: 1px solid;
+    width: 80%; */
+    /* overflow: auto  lo usamos para que footer esté abajo, al colapsar*/
+}
+
+section.fondos {
+    position: relative;
+
+}
+
+section.fondos::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url('./assets/Komodo_256_256.jpg');
+    opacity: 0.35;
+}
+
+/*otra forma para que footer esté abajo, al colapsar*/
+section.dragones::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.dragones div {
+    float: left
+}
+/* ejemplo de como al usar letras blancas se pueda leer pese a que haya problemas en el fondo de imagen en el fondo de dragones, convirtiendo el fondo en verde, pero hay que poner el background verde como primera orden */
+section.fondos2 {
+    padding: 1rem;
+    /* background-color: darkolivegreen; */
+    background-image: url('./assets/arena.jpg');
+    background-repeat: repeat;
+    /* color: whitesmoke; */
+}
+
+
+/* ejemplo de como convertir un div con comportamiento de imagen */
+section.fondos2 div {
+    border: 1px solid;
+    width: 25rem;
+    height: 25rem;
+    padding: 2rem;
+    background-image: url("./assets/Komodo_256_256.jpg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+}
