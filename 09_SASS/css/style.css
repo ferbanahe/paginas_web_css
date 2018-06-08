@@ -1,17 +1,40 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 2rem;
   background-color: bisque;
 }
-body header {
+
+/*aqui va el header* es un comentario css y aparecera en css y es multilínea*/
+header {
   width: 60%;
-  margin-left: auto;
+  margin-left: 30%;
   margin-right: auto;
 }
-body header h1 {
+header h1 {
   color: brown;
+  margin-bottom: 0.3rem;
 }
-body header p {
+header p {
   font-size: 1.5rem;
+  margin-top: 0;
+}
+header:hover {
+  background-color: white;
+}
+header p:hover {
+  color: blue;
+}
+
+footer address p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+footer > p {
+  color: brown;
 }
 
 /*# sourceMappingURL=css/style.css.map */

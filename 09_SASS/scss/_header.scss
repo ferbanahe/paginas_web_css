@@ -1,0 +1,22 @@
+$fondo: aquamarine;
+$fondo1: brown;
+$fondo2: mix($fondo,$fondo1);
+$margen1: 20%;
+$margen2: 10%;
+$margen3: $margen1 + $margen2;
+
+header {
+    width: 60%;
+    margin-left: $margen3;
+    margin-right: auto;
+    @import "_header2.scss";
+    // el & lo usamos para que se refiera al mismo header, ya que si no, no sabría a quién enlazar el hover
+    &:hover {
+        background-color: lighten($fondo,38);
+    }
+    
+
+
+    p:hover {color: blue}
+
+}
