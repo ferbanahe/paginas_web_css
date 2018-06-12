@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  overflow: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+section {
+  width: 75%;
+  float: left;
+  padding-right: 3rem;
+}
+
+h2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+aside {
+  padding-left: 3rem;
+  width: 25%;
+  float: left;
+}
+
+div {
+  width: 50%;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*# sourceMappingURL=css/style.css.map */
