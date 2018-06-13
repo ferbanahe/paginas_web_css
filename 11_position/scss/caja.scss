@@ -12,6 +12,10 @@ div {
     background-color: salmon;
     padding: 2rem;
     position: absolute;
-    top: 25%;
-    left: 30%;
+    // top: 25%; /*50% -1/2 alto*/
+    // left: 30%; /*50% -1/2 ancho*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+
 }
