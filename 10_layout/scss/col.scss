@@ -8,6 +8,11 @@
         padding-bottom: 0;
         margin-top: 0;
         margin-bottom: 0;
+    } @else if ($tipo==hori) {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -16,7 +21,7 @@
 }
 
 body {
-   @include reset(full);
+   @include reset();
 }
 
 header {
@@ -49,6 +54,10 @@ header {
         font-family: 'Abril Fatface', cursive;
         font-size: 2.4rem;
     }
+}
+
+nav {
+   >ul {}
 }
 
 nav {
@@ -102,23 +111,16 @@ main {
     margin-left: 10%;
     margin-right: 10%;
     font-family: 'Lora', serif;
-    max-width: 1000px;
 }
 section {
     width: 75%;
     float: left;
     padding-right: 3rem; 
 
-    h2 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     div {
-        width: 50%;
-        float: left;
-        padding-left: 1rem;
-        padding-right: 1rem; 
+        column-count: 2;
+        column-gap: 3rem;
+        column-rule: 1px solid;
 
         p:nth-of-type(1) {
             margin-top: 0;
@@ -128,7 +130,6 @@ section {
 aside {
     padding-left: 3rem;
     width: 25%;
-    min-width: 200px;
     float: left;
 }
 
