@@ -1,10 +1,59 @@
+$color_main: bisque;
+$color_back: brown;
 
 body {
-    background-color: brown;
-    color: bisque;
+    background-color: $color_back;
+    color: $color_main;
 }
-h1 {
-    font-family: 'Lobster', cursive;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 2rem;
+    }
+    nav {
+        font-size: 2rem;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+nav.menu-mobile,
+nav.menu-desk {
+    background-color: $color_main;
+    color: $color_back;
+    a {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        display: block;
+
+        &:hover {
+            background-color: $color_back;
+            color: $color_main;
+        }
+    }  
+}
+nav.hide-menu {
+    display: none;
+}
+
+section {
+    img {
+        width: 100%;
+        max-width: 650px;
+    }
 }
 
 footer {
@@ -15,9 +64,10 @@ footer {
 }
 
 
-@media screen and (min-device-width:620px ) {
+@media screen and (min-width:620px ) {
     h1 { 
         font-size: 2.3rem;
+        padding-left: 1rem;
     }
     .wrapper_flex {
         display: flex;
@@ -32,15 +82,81 @@ footer {
             flex: 0 1 25%;
         }
     }
+
+    section {
+        figure {
+            margin: 0;
+        }
+    }
 }
 
-@media screen and (min-device-width:820px ) {
-    h1 { 
-        font-size: 2.5rem;
+@media screen and (min-width:820px ) {
+    header {
+        h1 { 
+            font-size: 2.5rem;
+            padding-left: 2rem;
+        } 
+        nav {
+            display: none;
+        }
     }
+
+    nav.menu-mobile {
+        display: none;
+    }
+
+    nav.menu-desk {
+        display: block;
+        background-color: $color_back;
+        color: $color_main;
+        position: absolute;
+        right: 0;
+        top: 1.2rem;
+        ul {
+            display: flex;
+            li {
+                position: relative;
+                &:hover ul {
+                display: block;
+                }
+            } 
+        }
+        a {
+            padding: 0.5rem  1rem;
+            display: block;
+            &:hover {
+                background-color: $color_main;
+                color: $color_back;
+            }
+        }  
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 2rem;
+            left: -2rem;
+            background-color: rgba(165, 53, 53, 0.5 )
+        }
+    }
+
     .wrapper_columns {
-/*         column-count: 2;
-        column-gap: 2rem; */
+       /* column-count: 2;
+       column-gap: 2rem; */
         display: flex;
+        align-items: flex-start;
+        .wrapper_item_flex {
+            width: 50%;
+            padding: 0 1rem;
+            p:nth-of-type(1) {
+                margin-top: 0;
+            }
+        }
     }
+    section {
+        background-color: rgb(146, 73, 73);
+        h2 {
+            padding-left: 1rem;
+        }
+    }
+
 }
