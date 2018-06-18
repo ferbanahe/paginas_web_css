@@ -1,0 +1,57 @@
+body {
+  background-color: brown;
+  color: bisque;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+}
+
+footer {
+  border-top: 1px solid;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .wrapper_flex {
+    display: flex;
+  }
+  .wrapper_flex section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 0 1 75%;
+  }
+  .wrapper_flex aside {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 0 1 25%;
+  }
+}
+@media screen and (min-width: 820px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .wrapper_flex {
+    display: flex;
+  }
+  .wrapper_flex section {
+    column-count: 2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 0 1 75%;
+  }
+  .wrapper_flex aside {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 0 1 25%;
+  }
+}
+
+/*# sourceMappingURL=css/style.css.map */
