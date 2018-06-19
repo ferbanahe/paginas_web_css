@@ -1,0 +1,53 @@
+body {
+    margin-left: 2rem;
+}
+section {
+    margin-top: 2rem;
+    min-height: 80vh;
+}
+div {
+    width: 10rem;
+    height: 10rem;
+    background-color: maroon;
+    display: block;
+    transition: transform 3s linear;
+}
+button {
+    margin-bottom: 2rem;
+}
+.rotate {
+    button:hover+div{
+        /* transform-origin: top left; */
+        transform: rotate(45deg)    
+    }
+}
+.skew{
+    button:hover+div{
+        /* transform-origin: top left; */
+        /* skew() - skewX() - skewY() */
+        transform: skew(-45deg,20deg);
+    }
+}
+
+.scale button:hover + div {
+    /* transform-origin: top left; */
+    /* scale() - scaleX() - scaleY() */
+    transform-origin: top left;
+    /* transform: scaleX(1.5); */
+    transform: scale(1.5, 2.5);
+  }
+
+.translate button:hover + div {
+    /* transform-origin: top left; */
+    /* translate() - translateX() - translateY() */
+    /* transform-origin: top left; */
+    /* transform: scaleX(1.5); */
+    transform: translate(10rem, 10rem);
+  }
+
+/*
+space -> descendiente
+> -> hijo
++ -> hermano adyacente posterior
+~ -> hermano posterior
+*/
