@@ -1,54 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: brown;
-  color: bisque;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header h1 {
-  font-family: "Lobster", cursive;
-  font-size: 2rem;
-}
-header nav {
-  font-size: 2rem;
-}
-
-nav ul {
-  list-style: none;
-}
-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
-nav.menu-mobile,
-nav.menu-desk {
   background-color: bisque;
-  color: brown;
-}
-nav.menu-mobile a,
-nav.menu-desk a {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  display: block;
-}
-nav.menu-mobile a:hover,
-nav.menu-desk a:hover {
-  background-color: brown;
-  color: bisque;
 }
 
-nav.hide-menu {
-  display: none;
+h1 {
+  color: green;
 }
 
-section img {
-  width: 100%;
-  max-width: 650px;
+h2 {
+  color: crimson;
+}
+
+h3 {
+  color: darkblue;
 }
 
 footer {
@@ -58,30 +25,6 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 620px) {
-  h1 {
-    font-size: 2.3rem;
-    padding-left: 1rem;
-  }
-
-  .wrapper_flex {
-    display: flex;
-  }
-  .wrapper_flex section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    flex: 0 1 75%;
-  }
-  .wrapper_flex aside {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    flex: 0 1 25%;
-  }
-
-  section figure {
-    margin: 0;
-  }
-}
 @media screen and (min-width: 820px) {
   header h1 {
     font-size: 2.5rem;
@@ -97,8 +40,8 @@ footer {
 
   nav.menu-desk {
     display: block;
-    background-color: brown;
-    color: bisque;
+    background-color: yellow;
+    color: aqua;
     position: absolute;
     right: 0;
     top: 1.2rem;
@@ -117,8 +60,8 @@ footer {
     display: block;
   }
   nav.menu-desk a:hover {
-    background-color: bisque;
-    color: brown;
+    background-color: aqua;
+    color: yellow;
   }
   nav.menu-desk .submenu {
     display: none;
