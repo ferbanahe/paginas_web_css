@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
 }
-//en el body aplicamos media query a partir de modo tablet para dar color de fondoblanco, manteniendo fuente igual.
+//en el body aplico media query a partir de modo tablet para dar color de fondoblanco, manteniendo fuente igual.
 
 body {
     font-family: verdana, sans-serif, arial;
@@ -73,7 +73,7 @@ nav {
         }      
     }
 // he ocultado el menu superior en movil y lo muestro a partir de tablet en vertical e in line a partir de ordenador, aplicando color de texto y fondo a los items.
-// le cambio el color y fondo al pasar el raton por encima en modo ordenador con el hover
+// le cambio el color y fondo al pasar el raton por encima en modo tablet y ordenador con el hover
     .nav-superior{
         display: none;
         @media screen and (min-width: 650px) {
