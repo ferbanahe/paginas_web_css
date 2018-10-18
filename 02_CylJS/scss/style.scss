@@ -1,0 +1,159 @@
+
+* {
+    box-sizing: border-box;
+}
+//en el body aplico media query a partir de modo tablet para dar color de fondoblanco, manteniendo fuente igual.
+
+body {
+    font-family: verdana, sans-serif, arial;
+    background-color: bisque;
+    @media screen and (min-width: 650px) {
+        background-color: white;
+    }
+}
+//  he reseteado y dado color para los tres modos.
+body, h1, h2, h3, figure, ol, ul, li {
+   margin: 0;
+   padding: 0;
+   color: #333;
+}
+
+// he dado a los h espacios, color y tipo de texto
+h1, h2, h3{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #333;
+    font-family:cursive;
+}
+// Doy tamaño de texto a los h
+h1{
+    font-size: 50px;    
+}
+h2{font-size:35px;}
+h3{font-size:25px;}
+
+// doy espacio y alineo al centro las celdas de las tablas en todos los modos 
+th, td{
+    padding: 5px;
+    text-align: center;
+}
+//la imagen adoptará el 100 ppor cien del ancho de su contenedor
+img {
+    width: 100%;
+}
+
+// le asigno una altura mínima del 60 por ciento de pantalla
+section {
+    min-height: 60vh;
+}
+
+//quito los puntos predeterminados del ul
+
+ul{
+    list-style-type: none;
+}
+
+// le doy un 90 por ciento de ancho y lo centro horizontalmente con los margin
+.main_wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ //he suprimido el subrayado que trae el enlace por defecto y ocultado la hamburguesa a partir de tablet con la media qyery
+nav {
+    margin-bottom: 10px;
+     a {
+        text-decoration: none;
+        color: inherit;
+        &.fa-bars{
+            @media screen and (min-width: 650px) {
+                display: none;
+            }
+        }      
+    }
+// he ocultado el menu superior en movil y lo muestro a partir de tablet en vertical e in line a partir de ordenador, aplicando color de texto y fondo a los items.
+// le cambio el color y fondo al pasar el raton por encima en modo tablet y ordenador con el hover
+    .nav-superior{
+        display: none;
+        @media screen and (min-width: 650px) {
+            display: block;
+        }
+        li{
+            @media screen and (min-width: 990px) {
+                display: inline-block;
+                background-color: gray;
+                color: white;
+                font-weight: 700;
+                padding: 5px;
+                border-right: 2px solid white;
+                padding-right: 7px;
+            }
+            @media screen and (min-width: 650px) and (max-width:990px ){
+                display: block;
+                background-color: purple;
+                color: white;
+                margin-bottom: 5px;
+                padding: 5px;
+                line-height: 1.3em;
+            }
+            &:hover{
+                background-color:white;
+                color:gray;
+            }
+        }
+    }
+    &#bottom-menu{
+        @media screen and (min-width: 650px) {
+            display: none;
+        }
+    }
+}
+// hago desaparecer la tabla horizontal a partir de modo tablet y he dado fondo, espacio y color a las celdas de la tabla
+// con el display table hago que se vea el modo horizontal y con none desaparece el modo vertical
+table {
+    empty-cells: hide;
+    border-collapse: separate;
+    margin-bottom: 1rem;
+    td {
+        border: 1px solid white;
+        background-color: gainsboro;
+    }
+    th{
+        background-color:ghostwhite;
+    }
+    &.tabla_horizontal {
+        width: 100%;
+        display: none;
+        
+        @media screen and (min-width: 990px) {
+            display: table;
+        }
+    }
+    &.tabla_vertical {
+        @media screen and (min-width: 990px) {
+            display:none;
+        }
+    }
+}
+//le doy un 80 por ciento de ancho al contenedor a partir de tablet
+@media screen and (min-width: 650px) {
+    .main_wrapper {
+        width: 80%;
+    }
+}
+// aumento el ancho del contenedor en modo ordenador
+@media screen and (min-width: 990px) {
+    .main_wrapper {
+        width:80%;
+        max-width: 1100px;
+        }
+}
+
+// aplico fondo negro, texto blanco, espacio y centro el texto
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
